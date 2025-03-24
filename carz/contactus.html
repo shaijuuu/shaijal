@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("bm2.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color:transparent;
+            color: #f4a261;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: whitesmoke;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .input-field, .textarea-field {
+            width: 95%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .textarea-field {
+            height: 150px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #f4a261;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #f4a261;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Contact Us</h1>
+    </div>
+
+    <div class="container">
+        <h2>We'd love to hear from you!</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <input type="text" class="input-field" placeholder="Your Name" name="name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="input-field" placeholder="Your Email" name="email" required>
+            </div>
+            <div class="form-group">
+                <textarea class="textarea-field" placeholder="Your Message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <p><strong>Address:</strong> 1234 Street Name, City, Country</p>
+        <p><strong>Email:</strong> contact@website.com</p>
+        <p><strong>Phone:</strong> +1 234 567 890</p>
+    </div>
+
+</body>
+</html>

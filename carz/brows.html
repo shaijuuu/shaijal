@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Browsing</title>
+
+    <!-- External Font for Style -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Reset and Body Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image:url(bg4.jpg);
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1.5px;
+        }
+
+        /* Search Bar Container */
+        .search-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .search-container input {
+            padding: 12px 20px;
+            width: 60%;
+            font-size: 18px;
+            border: 2px solid #333;
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .search-container input:focus {
+            border-color: #007BFF;
+        }
+
+        /* Filter Dropdown */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .filter-container select {
+            padding: 12px;
+            font-size: 16px;
+            margin: 0 10px;
+            border-radius: 25px;
+            border: 2px solid #333;
+            outline: none;
+        }
+
+        /* Car Category Section */
+        .car-category-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        /* Individual Car Cards */
+        .category-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-card-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .category-card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .category-card-content p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .category-card-content a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Car Browsing Hub</h1>
+</header>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for cars..." oninput="filterCars()">
+</div>
+
+<!-- Filter Dropdowns -->
+<div class="filter-container">
+    <select id="carTypeFilter" onchange="filterCars()">
+        <option value="">All Car Models</option>
+        <option value="Sedan">Rolls royce</option>
+        <option value="SUV">Porche</option>
+        <option value="Coupe">Bugatti</option>
+        <option value="Truck">Lamborghini</option>
+    </select>
+    <select id="priceFilter" onchange="filterCars()">
+        <option value="">Price Range</option>
+        <option value="10000">Below $10,000</option>
+        <option value="30000">Below $30,000</option>
+        <option value="50000">Below $50,000</option>
+        <option value="50000+">Above $50,000</option>
+    </select>
+</div>
+
+<!-- Car Categories -->
+<div class="car-category-container" id="carCategoryContainer">
+    <div class="category-card" data-type="Sedan" data-price="20000">
+        <img src="d11a77ec7f569205491c2295f9a84ca0.jpg" alt="Sedan">
+        <div class="category-card-content">
+            <h3>Rolls royce</h3>
+            <p>Rolls-Royce is a British car brand famous for making luxury vehicles that are known for their quality and elegance.</p>
+            <a href="rollstype.html">View Details</a>
+        </div>
+    </div>
+    <div class="category-card" data-type="SUV" data-price="40000">
+        <img src="p2.jpg" alt="SUV">
+        <div class="category-card-content">
+            <h3>Porche</h3>
+            <p>Porsche is a German car company known for making fast and stylish cars. The Porsche 911 is one of their most famous models.</p>
+            <a href="porche.html">View Details</a>
+        </div>
+    </div>
+    <div class="category-card" data-type="Coupe" data-price="30000">
+        <img src="bug.jpg" alt="Coupe">
+        <div class="category-card-content">
+            <h3>Bugatti</h3>
+            <p>Bugatti is a French luxury car brand known for creating some of the fastest and most expensive cars in the world.        </p><br>
+            <a href="bugatti.html">View Details</a>
+        </div>
+    </div>
+    <div class="category-card" data-type="Truck" data-price="45000">
+        <img src="l4.jpg" alt="Truck">
+        <div class="category-card-content">
+            <h3>Lamborghini</h3>
+            <p>Lamborghini is an Italian luxury car brand that produces high-performance sports cars with striking designs.</p>
+            <a href="lambo.html">View Details</a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Car Browsing Hub. All rights reserved.</p>
+</footer>
+
+<script>
+    function filterCars() {
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        const carType = document.getElementById('carTypeFilter').value;
+        const priceRange = document.getElementById('priceFilter').value;
+
+        const cars = document.querySelectorAll('.category-card');
+        
+        cars.forEach(car => {
+            const carName = car.querySelector('h3').textContent.toLowerCase();
+            const carCategory = car.getAttribute('data-type');
+            const carPrice = car.getAttribute('data-price');
+
+            let isMatch = true;
+
+            // Search filter
+            if (searchTerm && !carName.includes(searchTerm)) {
+                isMatch = false;
+            }
+
+            // Car Type filter
+            if (carType && carCategory !== carType) {
+                isMatch = false;
+            }
+
+            // Price filter
+            if (priceRange && 
+                (priceRange === "50000+" && parseInt(carPrice) <= 50000 || 
+                parseInt(carPrice) > parseInt(priceRange))) {
+                isMatch = false;
+            }
+
+            car.style.display = isMatch ? 'block' : 'none';
+        });
+    }
+</script>
+
+</body>
+</html>

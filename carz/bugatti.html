@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugatti Cars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(bb.jpg);
+            background-size: contain;
+            color: #333;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .car-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            margin: 20px;
+            transform: scale(0.95);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .car-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .car-card h2 {
+            text-align: center;
+            font-size: 1.8em;
+            margin: 20px 0;
+        }
+
+        .car-card p {
+            text-align: center;
+            padding: 0 20px 20px;
+            font-size: 1.1em;
+        }
+
+        .car-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .car-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .car-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .car-card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Types of Bugatti Cars</h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <div class="car-card">
+                <img src="bc.jpg" alt="Bugatti Chiron">
+                <h2>Bugatti Chiron</h2>
+                <p>The Chiron is a hypercar that defines speed, offering over 1,500 horsepower and a top speed of 261 mph.</p>
+            </div>
+
+            <div class="car-card">
+                <img src="bv.jpg" alt="Bugatti Veyron">
+                <h2>Bugatti Veyron</h2>
+                <p>One of the most iconic supercars of the 21st century, the Veyron holds a record for top speed at 267 mph.</p>
+            </div>
+
+            <div class="car-card">
+                <img src="bd.jpg" alt="Bugatti Divo">
+                <h2>Bugatti Divo</h2>
+                <p>The Divo is a stunning, performance-oriented hypercar with a focus on cornering and agility, made for true enthusiasts.</p>
+            </div>
+
+            <div class="car-card">
+                <img src="bl.jpg" alt="Bugatti La Voiture Noire">
+                <h2>Bugatti La Voiture Noire</h2>
+                <p>The La Voiture Noire is an exclusive, luxury masterpiece, featuring exceptional design and incredible performance.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Bugatti Showcase</p>
+    </footer>
+
+</body>
+</html>

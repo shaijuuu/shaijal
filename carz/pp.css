@@ -1,0 +1,224 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111; /* Dark background */
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #111; /* Dark theme background */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid #333; /* Subtle separation line */
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo a {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f4a261; /* Accent color on hover */
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.test-drive-btn {
+    background-color: #f4a261; /* Accent color */
+    color: #fff;
+}
+
+.test-drive-btn:hover {
+    background-color: #e07b47;
+}
+
+.explore-btn {
+    background-color: transparent;
+    border: 2px solid #f4a261;
+    color: #f4a261;
+}/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111; /* Dark background */
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    background-image: url('your-image-path.jpg.jpg'); /* Replace with your car image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    max-width: 800px;
+    padding: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+}
+
+.browse-btn {
+    background-color: transparent; /* Accent color */
+    color: #f4a261;
+    border: 2px solid #f4a261;
+}
+
+.browse-btn:hover {
+    background-color: #e07b47;
+    color: #fff; 
+    transform: scale(1.05);
+}
+
+.test-drive-btn {
+    background-color: transparent;
+    border: 2px solid #f4a261;
+    color: #f4a261;
+}
+
+.test-drive-btn:hover {
+    background-color: #f4a261;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Optional: Add media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+.explore-btn{
+    background-color: transparent;
+    border: 2px solid #f4a261;
+    color: #f4a261;
+}
+.explore-btn:hover {
+    background-color: #f4a261;
+    color: #fff;
+    border: 2px solid #f4a261;
+    transform: scale(1.05);
+}

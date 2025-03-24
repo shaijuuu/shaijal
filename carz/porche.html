@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche Cars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(poo.jpg);
+            background-size: contain;
+            color: #333;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .car-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            margin: 20px;
+            transform: scale(0.95);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .car-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .car-card h2 {
+            text-align: center;
+            font-size: 1.8em;
+            margin: 20px 0;
+        }
+
+        .car-card p {
+            text-align: center;
+            padding: 0 20px 20px;
+            font-size: 1.1em;
+        }
+
+        .car-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .car-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .car-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .car-card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Types of Porsche Cars</h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <div class="car-card">
+                <img src="p111.jpg" alt="Porsche 911">
+                <h2>Porsche 911</h2>
+                <p>The 911 is a high-performance sports car, known for its iconic design and incredible driving experience.</p>
+            </div>
+
+            <div class="car-card">
+                <img src="pccc.jpg" alt="Porsche Cayenne">
+                <h2>Porsche Cayenne</h2>
+                <p>The Cayenne is a luxury SUV combining Porsche’s renowned performance with practical utility and comfort.</p>
+            </div>
+
+            <div class="car-card">
+                <img src="ptt.jpg" alt="Porsche Taycan">
+                <h2>Porsche Taycan</h2>
+                <p>The Taycan is Porsche’s all-electric sports sedan, delivering cutting-edge technology and electric performance.</p>
+            </div>
+
+            <div class="car-card">
+                <img src="p77.jpg" alt="Porsche 718 Cayman">
+                <h2>Porsche 718 Cayman</h2>
+                <p>The 718 Cayman offers agile handling and a thrilling mid-engine experience with Porsche's signature precision.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Porsche Showcase</p>
+    </footer>
+
+</body>
+</html>

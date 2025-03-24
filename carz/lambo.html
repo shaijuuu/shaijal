@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamborghini Cars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(lb.jpg);
+            background-size:cover;
+            color: #333;
+        }
+
+        header {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .car-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            margin: 20px;
+            transform: scale(0.95);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .car-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .car-card h2 {
+            text-align: center;
+            font-size: 1.8em;
+            margin: 20px 0;
+        }
+
+        .car-card p {
+            text-align: center;
+            padding: 0 20px 20px;
+            font-size: 1.1em;
+        }
+
+        .car-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .car-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .car-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .car-card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        footer {
+            text-align: center;
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Types of Lamborghini Cars</h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <div class="car-card">
+                <img src="la.jpg" alt="Lamborghini Aventador">
+                <h2>Lamborghini Aventador</h2>
+                <p>The Aventador is a high-performance sports car known for its aggressive styling and remarkable speed, powered by a V12 engine.</p>
+            </div>
+
+            <div class="car-card">
+                <img src="lh.jpg" alt="Lamborghini Huracán">
+                <h2>Lamborghini Huracán</h2>
+                <p>The Huracán is a sleek and dynamic supercar featuring a V10 engine, blending high-performance technology with iconic Lamborghini design.</p>
+            </div>
+
+            <div class="car-card">
+                <img src="lu.jpg" alt="Lamborghini Urus">
+                <h2>Lamborghini Urus</h2>
+                <p>The Urus is Lamborghini's first SUV, combining luxury with SUV capabilities and exceptional performance with a twin-turbo V8 engine.</p>
+            </div>
+
+            <div class="car-card">
+                <img src="ls.jpg" alt="Lamborghini Sián">
+                <h2>Lamborghini Sián</h2>
+                <p>The Sián is Lamborghini's first hybrid supercar, combining a V12 engine with innovative electric technology for extreme performance and exclusivity.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Lamborghini Showcase</p>
+    </footer>
+
+</body>
+</html>
